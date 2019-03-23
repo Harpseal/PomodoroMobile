@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/option_menu_settings"
+        android:title="@string/option_menu_settings_text"/>
+    <item android:id="@+id/option_menu_hide_statusbar"
+        android:title="@string/option_menu_hide_statusbar_text" />
+</menu>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/perf_category_pomodoro" >
+        <Preference
+            android:key="pref_key_pomodoro_calendar"
+            android:summary="@string/perf_item_pomodoro_calendar_summary"
+            android:title="@string/perf_item_pomodoro_calendar" />
+        <Preference
+            android:key="pref_key_pomodoro_tags"
+            android:summary="@string/perf_item_pomodoro_tags_summary"
+            android:title="@string/perf_item_pomodoro_tags" />
+        <!-- This PreferenceScreen tag serves as a screen break (similar to page break in word processing). Like for other preference types, we assign a key here so it is able to save and restore its instance state. -->
+
+        <Preference
+            android:key="pref_key_pomodoro_work"
+            android:summary=""
+            android:title="@string/perf_item_pomodoro_work" />
+        <Preference
+            android:key="pref_key_pomodoro_relax"
+            android:summary=""
+            android:title="@string/perf_item_pomodoro_relax" />
+        <Preference
+            android:key="pref_key_pomodoro_relax_long"
+            android:summary=""
+            android:title="@string/perf_item_pomodoro_relax_long" />
+    </PreferenceCategory>
+    <!--PreferenceCategory android:title="@string/perf_category_timer" >
+        <Preference
+            android:key="pref_key_timer1"
+            android:summary=""
+            android:title="@string/perf_item_timer1" />
+        <Preference
+            android:key="pref_key_timer2"
+            android:summary=""
+            android:title="@string/perf_item_timer2" />
+        <Preference
+            android:key="pref_key_timer3"
+            android:summary=""
+            android:title="@string/perf_item_timer3" />
+        <Preference
+            android:key="pref_key_timer4"
+            android:summary=""
+            android:title="@string/perf_item_timer4" />
+    </PreferenceCategory-->
+    <PreferenceCategory android:title="@string/perf_category_software_information" >
+        <Preference
+            android:key="pref_key_build_info"
+            android:summary=""
+            android:title="@string/perf_item_build_info" />
+    </PreferenceCategory>
+</PreferenceScreen>

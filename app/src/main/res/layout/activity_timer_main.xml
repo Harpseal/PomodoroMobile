@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:id="@+id/activity_main_mobile_timer_context"
+    tools:context="io.harpseal.pomodoromobile.MainTimerActivity">
+    <!--android:background="@color/colorPrimaryDark"-->
+    <TextView
+        android:id="@+id/textview_center"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_margin="0dp"
+        android:gravity="center"
+        android:text=" "
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryLight"
+        android:textSize="72sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_calendar_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/textview_center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textview_calendar_prefix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="●"
+            android:textColor="@color/colorFont"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textview_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Calendar"
+            android:textColor="@color/colorFont"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <!--<TextView-->
+    <!--android:id="@+id/textview_calendar"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--android:text="Calendar"-->
+    <!--android:textColor="@color/colorPrimaryLight"-->
+    <!--android:textSize="24sp"-->
+    <!--app:layout_constraintBottom_toTopOf="@+id/textview_center"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent" />-->
+
+    <ProgressBar
+        android:id="@+id/circularProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:indeterminate="false"
+        android:max="10000"
+        android:progress="6000"
+        android:progressDrawable="@drawable/progressbar"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <LinearLayout
+        android:id="@+id/layout_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="@id/circularProgressBar"
+        app:layout_constraintBottom_toBottomOf="@id/circularProgressBar"
+        android:gravity="center">
+
+
+
+        <TextView
+            android:id="@+id/textview_time_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="30"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="72sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_center_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:gravity="center"
+            android:paddingBottom="14dp"
+            android:text=":"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="72sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_time_sec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="00"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="72sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--TextView
+            android:id="@+id/textview_time_min_sec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="9999:59"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="72sp"
+            android:textAlignment="center"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" /-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="3dp"
+        android:gravity="center"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_center"
+        >
+
+        <Button
+            android:id="@+id/button_status_reset"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:alpha="0.6"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:background="@drawable/ic_round_cancel_24px"
+            android:onClick="onButtonClick"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_status_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:onClick="onButtonClick"
+            android:text="Work"
+            android:textColor="@color/colorFont"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:background="#00000000"
+            android:padding="0dp"
+            android:layout_margin="0dp">
+
+        </Button>
+        <Button
+            android:id="@+id/button_status_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:onClick="onButtonClick"
+            android:text="00:00"
+            android:textColor="@color/colorFont"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:textAllCaps="false"
+            android:background="#00000000"
+            android:visibility="gone">
+
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_scr_always_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintTop_toBottomOf="@+id/layout_status"
+        app:layout_constraintStart_toStartOf="@+id/layout_status"
+        app:layout_constraintEnd_toEndOf="@+id/layout_status"
+
+        >
+        <ImageView
+            android:id="@+id/image_power"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:alpha="0.6"
+            android:visibility="gone"
+            android:background="@drawable/ic_round_power_24px"
+            />
+        <ImageView
+            android:id="@+id/image_scr_always_on"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:alpha="0.6"
+            android:visibility="visible"
+            android:background="@drawable/ic_round_screen_on_24px"
+            />
+        <ImageView
+            android:id="@+id/image_scr_always_on_lock"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:alpha="0.6"
+            android:visibility="gone"
+            android:background="@drawable/ic_round_lock_24px"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_settings"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:alpha="0.6"
+        android:background="@drawable/ic_round_more_vert_24px"
+        android:onClick="onButtonClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button_previous"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_round_skip_previous_24px"
+            android:onClick="onButtonClick"
+            android:alpha="0.6"
+            app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar"
+            app:layout_constraintDimensionRatio="H,1:1"
+            tools:layout_editor_absoluteX="136dp" />
+
+        <Button
+            android:id="@+id/button_play"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:alpha="0.6"
+            android:background="@drawable/ic_round_play_arrow_24px"
+            android:onClick="onButtonClick"
+            app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar"
+            app:layout_constraintDimensionRatio="H,1:1"
+            tools:layout_editor_absoluteX="136dp" />
+
+        <Button
+            android:id="@+id/button_pause"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:alpha="0.6"
+            android:visibility="gone"
+            android:background="@drawable/ic_round_pause_24px"
+            app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar"
+            app:layout_constraintDimensionRatio="H,1:1"
+            tools:layout_editor_absoluteX="136dp" />
+
+        <Button
+            android:id="@+id/button_stop"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:alpha="0.6"
+            android:width="48dp"
+            android:background="@drawable/ic_round_stop_24px"
+            android:onClick="onButtonClick"
+            app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar"
+            app:layout_constraintDimensionRatio="H,1:1"
+            tools:layout_editor_absoluteX="136dp" />
+
+        <Button
+            android:id="@+id/button_next"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:alpha="0.6"
+            android:width="48dp"
+            android:background="@drawable/ic_round_skip_next_24px"
+            android:onClick="onButtonClick"
+            app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar"
+            app:layout_constraintDimensionRatio="H,1:1"
+            tools:layout_editor_absoluteX="136dp" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

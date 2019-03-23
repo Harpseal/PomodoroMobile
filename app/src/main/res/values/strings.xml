@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">Pomodoro</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="title_no_device_connected">No wearable device is currently connected.</string>
+    <string name="ok_no_device_connected">OK</string>
+    <string name="title_activity_moblie_config">Settings</string>
+
+    <string name="text_builder_time_start">開始</string>
+    <string name="text_builder_time_end">結束</string>
+    <string name="text_builder_time_to">到</string>
+    <string name="text_builder_finish_alarm">確定要放棄?</string>
+    <string name="text_builder_finish_alarm_ok">確定</string>
+    <string name="text_builder_finish_alarm_cancel">取消</string>
+
+    <string name="text_timer_mode_idle">閒置</string>
+    <string name="text_timer_mode_out_of_time">超時</string>
+    <string name="text_timer_mode_work">工作</string>
+    <string name="text_timer_mode_relax">休息</string>
+    <string name="text_timer_mode_relax_long">長休息</string>
+    <string name="text_timer_postfix_doing">中</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+
+    <!-- Example settings for Notifications -->
+    <string name="perf_category_software_information">Software Information</string>
+    <string name="perf_category_pomodoro">Pomodoro Configuration</string>
+
+    <string name="perf_screen_pomodoro_timer">Pomodoro Timers</string>
+    <string name="perf_screen_pomodoro_timer_summary">Timers for Work, Relax and Long Relax</string>
+
+    <string name="perf_item_pomodoro_calendar">Calendar</string>
+    <string name="perf_item_pomodoro_calendar_summary">請選擇儲存Pomodoro事件的Google Calendar</string>
+    <string name="perf_item_pomodoro_tags">Tags</string>
+    <string name="perf_item_pomodoro_tags_summary">Tags用於快速生成Pomodoro事件標題</string>
+
+    <string name="perf_item_pomodoro_work">設定工作時間長度</string>
+    <string name="perf_item_pomodoro_relax">設定休息時間長度</string>
+    <string name="perf_item_pomodoro_relax_long">設定長休息時間長度</string>
+
+
+    <string name="perf_category_timer">Timer Configuration</string>
+    <string name="perf_item_timer1">設定Timer1時間長度</string>
+    <string name="perf_item_timer2">設定Timer2時間長度</string>
+    <string name="perf_item_timer3">設定Timer3時間長度</string>
+    <string name="perf_item_timer4">設定Timer4時間長度</string>
+
+    <string name="perf_item_build_info">版本資訊</string>
+
+    <string name="dialog_tag_editor_is_default_checked">預設選取</string>
+    <string name="title_activity_main_mobile_settings">Pomodoro Settings</string>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+
+    <string name="option_menu_settings_text">Settings</string>
+    <string name="option_menu_hide_statusbar_text">Show/Hide status bar</string>
+</resources>
