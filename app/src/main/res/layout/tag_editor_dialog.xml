@@ -14,5 +14,6 @@
         android:layout_height="wrap_content"
         android:text="@string/dialog_tag_editor_is_default_checked"
         android:id="@+id/dialog_tag_editor_checkBox"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"/>
 </LinearLayout>

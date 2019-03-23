@@ -334,7 +334,7 @@ public class MainTimerActivity extends Activity implements PopupMenu.OnMenuItemC
                         changeProgressBarMode(ProgressMode.ERROR);
                 }
                 progressCur = 100.f;
-                updateModeText(getResources().getString(R.string.text_timer_mode_out_of_time),"+");
+                updateModeText("","(" + getResources().getString(R.string.text_timer_mode_out_of_time) + ")");
             }
             else
             {
@@ -905,9 +905,10 @@ public class MainTimerActivity extends Activity implements PopupMenu.OnMenuItemC
     {
         if (mDataTomatoDateStart == mDataTomatoDateEnd) return;
 
-        int statTextID = mTomatoType == TimerUtil.KEY_TOMATO_WORK? R.string.text_timer_mode_work :
-                mTomatoType == TimerUtil.KEY_TOMATO_RELAX ? R.string.text_timer_mode_relax :
-                        mTomatoType == TimerUtil.KEY_TOMATO_RELAX_LONG ? R.string.text_timer_mode_relax : R.string.text_timer_mode_idle;
+        int statTextID =
+                mTomatoType.equals(TimerUtil.KEY_TOMATO_WORK)? R.string.text_timer_mode_work :
+                mTomatoType.equals(TimerUtil.KEY_TOMATO_RELAX) ? R.string.text_timer_mode_relax :
+                mTomatoType.equals(TimerUtil.KEY_TOMATO_RELAX_LONG) ? R.string.text_timer_mode_relax : R.string.text_timer_mode_idle;
 
         Long timeInMillis = System.currentTimeMillis();
         SimpleDateFormat timeTxtFormat = new SimpleDateFormat("HH:mm:ss");
@@ -916,18 +917,13 @@ public class MainTimerActivity extends Activity implements PopupMenu.OnMenuItemC
         if (mDataTomatoDateEnd<timeInMillis)
         {
             iconID = R.mipmap.icon_tomato_color;
-            noTitle = getResources().getString(R.string.text_timer_mode_out_of_time) +
-                    getResources().getString(R.string.text_timer_mode_relax) +
-                    getResources().getString(R.string.text_timer_postfix_doing);
-            noText = getResources().getString(R.string.text_timer_mode_relax) +
-                    getResources().getString(R.string.text_builder_time_end) + " @ " + timeTxtFormat.format(new Date(mDataTomatoDateEnd));
+            noTitle = getResources().getString(statTextID) + "(" + getResources().getString(R.string.text_timer_mode_out_of_time) + ")";
+            noText = getResources().getString(R.string.text_builder_time_end) + " @ " + timeTxtFormat.format(new Date(mDataTomatoDateEnd));
         }
         else {
             iconID = R.mipmap.icon_tomato_color_light;
-            noTitle = getResources().getString(statTextID) +
-                    getResources().getString(R.string.text_timer_postfix_doing);
-            noText = getResources().getString(statTextID) +
-                    getResources().getString(R.string.text_builder_time_start) + " @ " + timeTxtFormat.format(new Date(mDataTomatoDateStart)) + "  ⇨  " +
+            noTitle = getResources().getString(statTextID);
+            noText = getResources().getString(R.string.text_builder_time_start) + " @ " + timeTxtFormat.format(new Date(mDataTomatoDateStart)) + "  ⇨  " +
                     getResources().getString(R.string.text_builder_time_end) + " @ " + timeTxtFormat.format(new Date(mDataTomatoDateEnd));
         }
 
@@ -985,20 +981,17 @@ public class MainTimerActivity extends Activity implements PopupMenu.OnMenuItemC
                 mTextCal.setVisibility(View.VISIBLE);
                 mTextCalPrefix.setVisibility(View.VISIBLE);
                 mBtnStatusMode.setText(prefix +
-                        getResources().getString(R.string.text_timer_mode_work) +
-                        getResources().getString(R.string.text_timer_postfix_doing) + postfix);
+                        getResources().getString(R.string.text_timer_mode_work) + postfix);
                 break;
             case TimerUtil.KEY_TOMATO_RELAX:
                 mTextCal.setVisibility(View.VISIBLE);
                 mTextCalPrefix.setVisibility(View.VISIBLE);
-                mBtnStatusMode.setText(prefix + getResources().getString(R.string.text_timer_mode_relax) +
-                        getResources().getString(R.string.text_timer_postfix_doing) + postfix);
+                mBtnStatusMode.setText(prefix + getResources().getString(R.string.text_timer_mode_relax) + postfix);
                 break;
             case TimerUtil.KEY_TOMATO_RELAX_LONG:
                 mTextCal.setVisibility(View.VISIBLE);
                 mTextCalPrefix.setVisibility(View.VISIBLE);
-                mBtnStatusMode.setText(prefix + getResources().getString(R.string.text_timer_mode_relax_long) +
-                        getResources().getString(R.string.text_timer_postfix_doing) + postfix);
+                mBtnStatusMode.setText(prefix + getResources().getString(R.string.text_timer_mode_relax_long) + postfix);
                 break;
 
             case TimerUtil.KEY_TOMATO_IDLE:

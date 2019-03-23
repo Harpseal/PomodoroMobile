@@ -46,20 +46,14 @@ public class AlarmReceiver extends BroadcastReceiver
 
         if(bData.get("msg").equals("play_tomato_alarm"))
         {
-            noTitle = context.getResources().getString(R.string.text_timer_mode_out_of_time) +
-                    context.getResources().getString(R.string.text_timer_mode_relax) +
-                    context.getResources().getString(R.string.text_timer_postfix_doing);
-            noText = context.getResources().getString(R.string.text_timer_mode_relax) +
-                    context.getResources().getString(R.string.text_builder_time_end) + " @ " + dateText;
+            noTitle = context.getResources().getString(R.string.text_timer_mode_relax) + "(" + context.getResources().getString(R.string.text_timer_mode_out_of_time) + ")";
+            noText = context.getResources().getString(R.string.text_builder_time_end) + " @ " + dateText;
             //Log.d(TAG,"play_tomato_alarm " + v.hasVibrator());
         }
         else if(bData.get("msg").equals("play_tomato_warning"))
         {
-            noTitle = context.getResources().getString(R.string.text_timer_mode_out_of_time) +
-                    context.getResources().getString(R.string.text_timer_mode_work) +
-                    context.getResources().getString(R.string.text_timer_postfix_doing);
-            noText = context.getResources().getString(R.string.text_timer_mode_work) +
-                    context.getResources().getString(R.string.text_builder_time_end) + " @ " + dateText;
+            noTitle = context.getResources().getString(R.string.text_timer_mode_work) + "(" + context.getResources().getString(R.string.text_timer_mode_out_of_time) + ")";
+            noText = context.getResources().getString(R.string.text_builder_time_end) + " @ " + dateText;
             Log.d(TAG,"play_tomato_warning");
         }
 

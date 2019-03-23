@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pomodoro</string>
+    <string name="text_builder_time_start">開始</string>
+    <string name="text_builder_time_end">結束</string>
+    <string name="text_builder_time_to">到</string>
+    <string name="text_builder_finish_alarm">確定要放棄?</string>
+    <string name="text_builder_finish_alarm_ok">確定</string>
+    <string name="text_builder_finish_alarm_cancel">取消</string>
+
+    <string name="text_timer_mode_idle">閒置</string>
+    <string name="text_timer_mode_out_of_time">超時</string>
+    <string name="text_timer_mode_work">工作中</string>
+    <string name="text_timer_mode_relax">休息中</string>
+    <string name="text_timer_mode_relax_long">長休息中</string>
+
+    <string name="perf_item_pomodoro_calendar_summary">請選擇儲存Pomodoro事件的Google Calendar</string>
+    <string name="perf_item_pomodoro_tags_summary">Tags用於快速生成Pomodoro事件標題</string>
+
+    <string name="perf_item_pomodoro_work">設定工作時間長度</string>
+    <string name="perf_item_pomodoro_relax">設定休息時間長度</string>
+    <string name="perf_item_pomodoro_relax_long">設定長休息時間長度</string>
+
+
+    <string name="perf_category_timer">Timer Configuration</string>
+
+    <string name="perf_item_build_info">版本資訊</string>
+
+    <string name="dialog_tag_editor_is_default_checked">預設選取</string>
+</resources>
